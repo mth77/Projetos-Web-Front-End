@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #2E7D32;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.main-content {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.account-balance {
+    background-color: #2E7D32;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.balance-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.balance-amount {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.transaction-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.summary-card {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+#teste{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.income {
+    color: #2E7D32;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.expense {
+    color: #FF5252;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.promo-card {
+    background-image: url('img_seguros.png');
+    background-repeat: no-repeat;
+    height: 270px;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    position: relative;
+    flex: 1.6;
+}
+
+.action-buttons {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.action-button {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    color: #2E7D32;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.action-button img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.transactions-list {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.transactions-title {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.transaction-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: start;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.pix-tabs {
+    display: flex;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+.pix-tab {
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+}
+
+.pix-tab.active {
+    border-bottom: 2px solid #2E7D32;
+    color: #2E7D32;
+}
+
+.pix-form {
+    display: none;
+}
+
+.pix-form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-error {
+    color: #FF5252;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.btn {
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #1B5E20;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2E7D32;
+    color: white;
+    margin-top: 14rem;
+}
+
+.message {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.message.success {
+    background-color: #C8E6C9;
+    color: #2E7D32;
+}
+
+.message.error {
+    background-color: #FFCDD2;
+    color: #C62828;
+}
+
+.close-modal {
+    float: right;
+    cursor: pointer;
+    font-size: 1.5rem;
+}

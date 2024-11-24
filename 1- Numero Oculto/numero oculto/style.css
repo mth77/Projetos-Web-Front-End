@@ -1,0 +1,80 @@
+*{
+    margin: 5px;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-align: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: rgb(2,0,36);
+    background: linear-gradient(321deg, rgba(2,0,36,1) 0%, rgba(2,2,122,1) 15%, rgba(255,0,253,1) 100%);
+}
+#geral{
+    border: 2px solid rgba(255,0,253,1);
+    border-radius: 20px;
+    min-width: 500px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    background-color: #00004f;
+    background-image: linear-gradient(135deg, #e65758 #771d32 );
+}
+#mensagem { 
+    margin: 20px; 
+}
+#jogarNovamente { 
+    display: none;
+    grid-column: 1/4;
+    min-width: 150px;
+    margin: 0 auto;
+    border: 1px solid rgba(255,0,253,1);
+    border-radius: 10px;
+    background: linear-gradient(321deg, rgba(2,0,36,1) 0%, rgba(2,2,122,1) 15%, rgba(255,0,253,1) 100%);
+    color: WHITE;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5PX;
+}
+#jogar{
+    padding: 5px;
+    min-width: 100px;
+    grid-column: 1/4;
+    margin: 0 auto;
+    border: 1px solid rgba(255,0,253,1);
+    border-radius: 10px;
+    background: linear-gradient(321deg, rgba(2,0,36,1) 0%, rgba(2,2,122,1) 15%, rgba(255,0,253,1) 100%);
+    color: WHITE;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+h1{
+    grid-column: 1/4;
+    margin-top: 15px;
+}
+#title{
+    grid-column: 1/4;
+}
+#chute{
+    grid-column: 2/3;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255,0,253,1);
+}
+#mensagem{
+    grid-column: 1/4;
+    margin: 0 auto;
+}
+#msgChances{
+    grid-column: 1/4;
+    margin-bottom: 15px;
+}

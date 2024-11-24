@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background: url(midia/bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerjogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.localCartas{
+    display: grid;
+    grid-template-columns: repeat(3, 180px);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.carta{
+    width: 180px;
+    height: 180px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    background-size: cover;
+    background-position: center;
+}
+
+.localCartas {
+    perspective: 1000px;
+}
+
+.carta.flip{
+    transform: rotateY(180deg);
+}
+
+.carta.acertou {
+    border: 3px solid green; 
+}
+
+.infos{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem 3rem;
+    border-radius: 5px ;
+
+}
+
+#botaoReset{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#botaoReset:hover{
+    background-color: #45a059;
+}
+
+#mensagem{
+    padding-bottom: 1rem;
+}

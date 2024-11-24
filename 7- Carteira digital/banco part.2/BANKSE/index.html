@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankSE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span><img src="img_logo.png" alt="BankSE Logo"></span>
+        </div>
+        <div class="user-profile">
+            <span>Olá, Gustavo</span>
+            <img src="icon_user_.png" alt="User Icon">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="account-balance">
+            <div class="balance-label">Conta</div>
+            <div class="balance-amount">R$ 10,00</div>
+        </div>
+
+        <div class="transaction-summary">
+            <div class="summary-card">
+                <div>Entradas</div>
+                <div class="income">R$ 10,00</div>
+            </div>
+            <div class="summary-card">
+                <div>Saídas</div>
+                <div class="expense">R$ 0,00</div>
+            </div>
+        </div>
+
+        <section id="teste">
+            <div class="promo-card">
+                <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                    Seguros
+                </div>
+            </div>
+            <div class="action-buttons">
+                <div class="action-button" id="pixButton">
+                    <img src="icon_pix_.png" alt="PIX Icon">
+                    <span>Área PIX</span>
+                </div>
+                <div class="action-button" id="payButton">
+                    <img src="icon _dollar_.png" alt="Pay Icon">
+                    <span>Pagar</span>
+                </div>
+                <div class="action-button" id="investButton">
+                    <img src="icon _graph_.png" alt="Invest Icon">
+                    <span>Investir</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="transactions-list">
+            <h2 class="transactions-title">Últimas transações</h2>
+            <div id="transactionsList">
+                <!-- <div class="transaction-item">
+                    <div class="transaction-icon">⬇️</div>
+                    <div class="transaction-details">
+                        <div>Entrada | 01/01/2024 - 01:01:01</div>
+                        <div>Tipo: Transferência recebida</div>
+                        <div>De: 000.000.000-00</div>
+                        <div>ID: 202401010101</div>
+                    </div>
+                    <div class="transaction-amount">R$10,00</div>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="pixModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="pix-tabs">
+                <button class="pix-tab active" data-tab="receive">Receber</button>
+                <button class="pix-tab" data-tab="transfer">Transferir</button>
+            </div>
+
+            <div class="message success" id="successMessage">Transação realizada com sucesso</div>
+            <div class="message error" id="errorMessage">Todos os campos devem ser preenchidos corretamente!</div>
+
+            <!-- Formulário de Recebimento -->
+            <form class="pix-form active" id="receiveForm">
+                <div class="form-group">
+                    <label for="receiveCpf">CNPJ/CPF</label>
+                    <input type="text" id="receiveCpf" name="cpf" placeholder="000.000.000-00">
+                </div>
+                <div class="form-group">
+                    <label for="receiveAmount">Valor</label>
+                    <input type="text" id="receiveAmount" name="amount" placeholder="0,00">
+                </div>
+                <button type="submit" class="btn">Receber</button>
+            </form>
+
+            <!-- Formulário de Transferência -->
+            <form class="pix-form" id="transferForm">
+                <div class="form-group">
+                    <label for="transferKey">Chave PIX</label>
+                    <input type="text" id="transferKey" name="key" placeholder="Digite a chave PIX">
+                </div>
+                <div class="form-group">
+                    <label for="transferAmount">Valor</label>
+                    <input type="text" id="transferAmount" name="amount" placeholder="0,00">
+                </div>
+                <button type="submit" class="btn">Transferir</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="systemModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p>Sistema indisponível. Tente novamente mais tarde.</p>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 BankSE - Desenvolvido por: Gustavo M. Trindade
+    </footer>
+</body>
+</html>
